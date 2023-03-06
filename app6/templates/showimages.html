@@ -1,0 +1,33 @@
+<html>
+    {% load static %}
+    <body>
+        {% for msg in messages%}
+        {{msg}}
+        {% endfor %}
+        
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>AGE</th>
+                <th>PLACE</th>
+                <th>EMAIL</th>
+                <th>PHOTO</th>
+                <th>ACTIONS</th>
+                
+            </tr>
+            {% for image in images %}
+            <tr>
+                <td>{{image.id}}</td>
+                <td>{{image.Name}}</td>
+                <td>{{image.Age}}</td>
+                <td>{{image.Place}}</td>
+                <td>{{image.Email}}</td>
+                <td><img src="{{image.Image.url}}" height="50px" width="50px"></td>
+                <td><a href="{% url 'app6:update' image.id%}">Update</a></td>
+                <td><a href="{% url 'app6:delete' image.id%}">Delete</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+    </html>

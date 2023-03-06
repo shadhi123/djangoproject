@@ -1,0 +1,15 @@
+<html>
+    <head>
+    <body>
+        {% for msg in messages %}
+        {{msg}}
+        {% endfor %}
+        hello{{data}}
+        <a href="{% url 'app6:register' %}">SignUp</a>
+        <a href="{% url 'app6:login' %}">login</a>
+        <a href="{% url 'app6:showusers' %}">user</a>
+        <a href="{% url 'app6:image' %}">image</a>
+        <a href="{% url 'app6:showimages' %}">showimage</a>
+        </body>
+    </head>
+    </html>

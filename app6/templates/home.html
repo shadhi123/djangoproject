@@ -1,0 +1,13 @@
+<html>
+    <head>
+    </head>
+    <body>
+        {% for msg in messages %}
+        {{msg}}
+        {% endfor %}
+
+        {{user.Name}}
+        <a href="{% url 'app6:changepassword' user.id%}">changepassword</a>
+        <a href="{% url 'app6:logout' %}">logout</a>
+    </body>
+    </html>
